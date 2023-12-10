@@ -7,6 +7,22 @@ function task8() {
   // Викликаємо функцію fetchFakeData
   // Якщо проміс виконаний успішно виводимо в консоль дані які він повертає
   // Якщо проміс виконаний з помилкою виводимо в консоль помилку
+
+  function fetchFakeData() {
+    // Створюємо fakeData константу з данними { name: "John",age: 30}
+    const fakeData = {
+      name: "John",
+      age: 30,
+    };
+
+    return Promise.resolve(fakeData);
+  }
+
+  fetchFakeData()
+    // Якщо проміс виконаний успішно виводимо в консоль дані які він повертає
+    .then((data) => console.log(data))
+    // Якщо проміс виконаний з помилкою виводимо в консоль помилку
+    .catch((error) => console.log(error));
 }
 
 // Викликаємо функцію task8
